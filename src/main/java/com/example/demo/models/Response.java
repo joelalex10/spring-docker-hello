@@ -1,16 +1,16 @@
 package com.example.demo.models;
 
 public class Response {
-    public String greatiug;
+    public String greating;
     public Response(String response){
-        this.greatiug = response;
+        this.greating = response;
     }
 
-    public String getGreatiug() {
-        return greatiug;
+    public String getGreating() {
+        return greating;
     }
 
-    public void setGreatiug(String greatiug) {
-        this.greatiug = greatiug;
+    public void setGreating(String greating) {
+        this.greating = greating;
     }
 }
