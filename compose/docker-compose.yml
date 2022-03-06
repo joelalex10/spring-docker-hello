@@ -1,0 +1,28 @@
+version: '2'
+
+networks:
+  ucbnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.20.0.0/16
+        - gateway: 10.20.0.1
+
+services:
+  hello-1:
+    image: spring-load-balancer:1.0.1
+    networks:
+      - ucbnet
+
+  hello-2:
+    image: spring-load-balancer:1.0.1
+    networks:
+      - ucbnet
+  nginx:
+    image: nginx:1.21.6
+    ports:
+      - 7777:80
+    networks:
+      - ucbnet
+
